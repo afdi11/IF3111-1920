@@ -1,16 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
 
 
-*{
+* {
   margin: 0;
-}
+ }
+ body{
+   background: white;
+ }
+
+/* -------------------NAVBAR----------------- */
 .header {
-
   margin: 0;
-  padding: 0px 10px;
+  padding: 0px 8px;
   background-color: #24252A;
+  z-index: 99999;
+  box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
 
 }
+
+  h1{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 30pt;
+    color: black;
+    text-align: center;
+    padding-top: 2em;
+  }
+  h2{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 25pt;
+    color: black;
+    text-align: center;
+    padding-top: 0.4em;
+  }
 
  li, a, button{
    font-family: "Quicksand", sans-serif;
@@ -24,7 +47,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 20px 6%;
 }
 
 .logo{
@@ -59,19 +82,20 @@ header{
 
 .lain {
   font-size: 11pt;
-  margin-right: 1em;
+  margin-right: 2.3em;
+  margin-left: 1em;
   padding: 6px 21px;
   border-style: solid;
   border-width: 2px;
   border-radius: 50px;
-  border-color: rgba(0, 136, 169, 1);
+  border-color: rgba(252, 194, 3, 1);
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
 button{
   padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: rgba(252, 194, 3, 1);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -79,5 +103,80 @@ button{
 }
 
 button:hover{
-    background-color: rgba(0, 136, 169, 0.6);
+    background-color: rgba(252, 194, 3, 0.6);
+}
+
+/* --------------FIX POSITION NAVBAR SCROLL------------------ */
+.content {
+
+  padding: 8px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+
+  background-color: #24252A;
+}
+
+.sticky + .content {
+  padding-top: 700px;
+}
+
+
+/* ------------------HOME----------------------- */
+section{
+  width: 100%;
+  min-height: 400px;
+}
+.home{
+  position: relative;
+  background: linear-gradient(90deg, #FF8000, #FFEE04)
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1px solid white;
+  border-right: none;
+  padding: 5px 5px 5px 12px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  color: black;
+  outline: none;
+  font-size: 16pt;
+}
+
+.searchTerm:focus{
+  color: black;
+  font-size: 16pt;
+}
+
+.searchButton {
+  width: 60px;
+  height: 52px;
+  padding: 6px;
+  border-left: 2px solid #bdbdbd;
+  background: white;
+  text-align: center;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  margin-top: 2em;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
