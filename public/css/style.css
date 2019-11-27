@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
 
-* {
-  box-sizing: border-box;
+
+*{
   margin: 0;
-  padding: 0;
+}
+.header {
+
+  margin: 0;
+  padding: 0px 10px;
   background-color: #24252A;
 
 }
@@ -26,6 +30,7 @@ header{
 .logo{
   cursor: pointer;
   margin-right: auto;
+  margin-left: 0em;
 }
 
 .nav__links{

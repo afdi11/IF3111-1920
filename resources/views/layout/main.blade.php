@@ -7,8 +7,7 @@
   </head>
 
   <body>
-    <div class="header">
-    </div>
+    <div class="header" style="margin: 0;">
     <header>
       <img class="logo" src="{{ asset('image/logo.png') }}" style="width: 15%" alt="">
       <nav>
@@ -21,5 +20,8 @@
       <button type="button" name="button">MASUK</button>
     </header>
   </div>
+
+
+
   </body>
 </html>
