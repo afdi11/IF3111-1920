@@ -18,22 +18,6 @@
     box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
   }
 
-  h1{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 700;
-    font-size: 30pt;
-    color: black;
-    text-align: center;
-    padding-top: 2em;
-  }
-  h2{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 300;
-    font-size: 25pt;
-    color: black;
-    text-align: center;
-    padding-top: 0.4em;
-  }
 
  li, a, button{
    font-family: "Quicksand", sans-serif;
@@ -123,6 +107,27 @@ button:hover, .lain:hover{
 
 /* ------------------HOME----------------------- */
 
+
+  h1{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 30pt;
+    color: black;
+    text-align: center;
+    padding-top: 2em;
+  }
+  .notop{
+    padding-top: 0;
+  }
+  h2{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 25pt;
+    color: black;
+    text-align: center;
+    padding-top: 0.4em;
+  }
+
 section{
   width: 100%;
   min-height: 552px;
@@ -146,6 +151,7 @@ section{
 .tambah{
   background-color: black;
   font-size: 14pt;
+  box-shadow: 4px 4px 5px 2px rgba(0,0,0,.2);
 }
 
 .tambah:hover{
@@ -163,6 +169,7 @@ section{
   background: url(../image/rectangl.png);
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .search {
@@ -204,9 +211,9 @@ section{
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  margin-top: -2em;
+  margin-top: 4em;
   width: 60%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -215,8 +222,10 @@ section{
 
 /* -------------SECTION HOW TO--------------- */
   .container {
-      width: 1000px;
+      width: 100px auto;
       margin: 150px auto;
+      margin-bottom: 0;
+      position: relative;
     }
 
   .progressbar {
@@ -226,12 +235,16 @@ section{
       list-style-type: none;
       width: 25%;
       float: left;
-      font-size: 12pt;
+      font-size: 14pt;
       position: relative;
       text-align: center;
-      text-transform: uppercase;
+
       color: #7d7d7d;
   }
+  .progressbar li .blacks{
+      color: black;
+  }
+
   .progressbar li:before {
       width: 30px;
       height: 30px;
@@ -266,4 +279,25 @@ section{
   }
   .progressbar li.active + li:after {
       background-color: #55b776;
+  }
+
+
+  /* ------------------SECTION TERHANGAT------------------- */
+  .hangat{
+    position: relative;
+    background: linear-gradient(90deg, #FF8000, #FFEE04);
+  }
+
+  .hangat::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 155px;
+    background: url(../image/rectangl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }

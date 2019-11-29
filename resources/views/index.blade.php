@@ -25,13 +25,17 @@
   </section>
 
   <section class="container">
-    <h1 style="padding-top: 0; padding-bottom: 1em;">Cara Mengirim Laporan</h1>
+    <h1 class="notop" style=" padding-bottom: 2.5em;">Cara Mengirim Laporan</h1>
     <ul class="progressbar">
-     <li class="active" >Tulis Laporan</li>
-     <li>Proses Verifikasi</li>
-     <li>Proses Tindak Lanut</li>
-     <li>Selesai</li>
+     <li class="active"> <i class="fa fa-pencil-square-o"> </i> <br> <b>Tulis Laporan</b> <br> <br> <span style="color:black"> Laporkan Keluhan atau Aspirasi Kamu Dengan Jelas dan Lengkap </span> </li>
+     <li> <i class="fa fa-share fa-6"> </i> <br> Proses Verifikasi <br> <br> <span style="color:black"> Dalam Waktu 3 Hari Laporan Kamu Akan diverfikasi dan diteruskan Ke KM ITERA </span></li>
+     <li><i class="fa fa-comments fa-6"> </i> <br> Proses Tindak Lanut <br> <br> <span style="color: black"> Dalam 5 hari, KM ITERA akan menindaklanjuti dan membalas laporan Kamu</span></li>
+     <li><i class="fa fa-check fa-6"> </i> <br> Selesai <br> <br> <span style="color: black"> Laporan Kamu akan terus ditindaklanjuti hingga terselesaikan </span> </li>
    </ul>
+  </section>
+
+  <section class="hangat">
+    <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
   </section>
 
 @endsection
