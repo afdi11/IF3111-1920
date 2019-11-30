@@ -5,7 +5,9 @@
   margin: 0;
  }
  body{
+   box-sizing: border-box;
    background: white;
+   font-family: "Quicksand", sans-serif;
  }
 
 /* -------------------NAVBAR----------------- */
@@ -15,14 +17,14 @@
     padding: 0px 8px;
     background-color: #24252A;
     z-index: 99999;
-    box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
+    box-shadow: 0px 13px 34px -10px rgba(0,0,0,0.41);
   }
 
 
  li, a, button{
    font-family: "Quicksand", sans-serif;
    font-weight: 500;
-   font-size: 16;
+
    color: white;
    text-decoration: none;
  }
@@ -51,13 +53,22 @@ header{
 
 }
 
+
+.nav__links li a::before{
+  color: white;
+}
+
 .nav__links li a{
   transition: all 1s ease 0s;
 }
 
-.nav__links li a:hover{
-  color: #0888a9;
-}
+  .nav__links li a:hover{
+    color: rgba(252, 194, 3, 1);
+  }
+
+  .target{
+    border-bottom: 1px solid rgba(252, 194, 3, 1);;
+  }
 
 .lain {
   font-size: 11pt;
@@ -221,69 +232,86 @@ section{
 
 
 /* -------------SECTION HOW TO--------------- */
-  .container {
+  .containers {
       width: 100px auto;
       margin: 150px auto;
       margin-bottom: 0;
       position: relative;
     }
 
-  .progressbar {
-      counter-reset: step;
-  }
-  .progressbar li {
-      list-style-type: none;
-      width: 25%;
-      float: left;
-      font-size: 14pt;
-      position: relative;
-      text-align: center;
+.container {
+  width: 900px;
+  height: 250px;
+  position: relative;
+  top: 0;
+  left: 15;
+  right: 15;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 20px;
+}
 
-      color: #7d7d7d;
-  }
-  .progressbar li .blacks{
-      color: black;
-  }
+.items {
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 10px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
 
-  .progressbar li:before {
-      width: 30px;
-      height: 30px;
-      content: counter(step);
-      counter-increment: step;
-      line-height: 30px;
-      border: 2px solid #7d7d7d;
-      display: block;
-      text-align: center;
-      margin: 0 auto 10px auto;
-      border-radius: 50%;
-      background-color: white;
-  }
-  .progressbar li:after {
-      width: 100%;
-      height: 2px;
-      content: '';
-      position: absolute;
-      background-color: #7d7d7d;
-      top: 15px;
-      left: -50%;
-      z-index: -1;
-  }
-  .progressbar li:first-child:after {
-      content: none;
-  }
-  .progressbar li.active {
-      color: green;
-  }
-  .progressbar li.active:before {
-      border-color: #55b776;
-  }
-  .progressbar li.active + li:after {
-      background-color: #55b776;
-  }
+.icon-wrapper, .project-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper i {
+  font-size: 100px;
+  color: #ffa203;
+  transform: translateY(0px);
+  transition: all 0.6s;
+}
+
+.icon-wrapper {
+  align-self: end;
+}
+
+.project-name {
+  align-self: start;
+}
+
+.project-name p {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+
+.items:hover {
+  border-radius: 13px;
+  -webkit-box-shadow: 0px 0px 31px -8px rgba(71,71,71,1);
+  -moz-box-shadow: 0px 0px 31px -8px rgba(71,71,71,1);
+  box-shadow: 0px 0px 31px -8px rgba(71,71,71,1);
+}
+.items:hover .project-name p {
+  transform: translateY(-10px);
+}
+.items:hover .icon-wrapper i {
+  transform: translateY(5px);
+}
 
 
   /* ------------------SECTION TERHANGAT------------------- */
   .hangat{
+    height: 700px;
     position: relative;
     background: linear-gradient(90deg, #FF8000, #FFEE04);
   }
@@ -301,3 +329,37 @@ section{
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
+
+  .box{
+    color: black;
+    padding-left: 15px;
+    margin-top: 30px;
+    width: 80%;
+    height: 400px;
+    overflow: auto;
+    padding-left: 7.7em;
+  }
+
+.box-post{
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+.box-post .title{
+  font-weight: 500;
+  color: black;
+  font-size: 18px;
+  padding-right: 100px;
+}
+.box-post .title a{
+  font-weight: 700;
+  color: black;
+  font-size: 20px;
+}
+
+.box-post .isi p{
+  line-height: 2.214;
+  color: #4a4a4a;
+}

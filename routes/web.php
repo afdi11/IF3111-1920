@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/laporan', function () {
+    return view('buat_laporan');
+});

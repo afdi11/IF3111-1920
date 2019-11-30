@@ -24,18 +24,72 @@
 
   </section>
 
-  <section class="container">
-    <h1 class="notop" style=" padding-bottom: 2.5em;">Cara Mengirim Laporan</h1>
-    <ul class="progressbar">
-     <li class="active"> <i class="fa fa-pencil-square-o"> </i> <br> <b>Tulis Laporan</b> <br> <br> <span style="color:black"> Laporkan Keluhan atau Aspirasi Kamu Dengan Jelas dan Lengkap </span> </li>
-     <li> <i class="fa fa-share fa-6"> </i> <br> Proses Verifikasi <br> <br> <span style="color:black"> Dalam Waktu 3 Hari Laporan Kamu Akan diverfikasi dan diteruskan Ke KM ITERA </span></li>
-     <li><i class="fa fa-comments fa-6"> </i> <br> Proses Tindak Lanut <br> <br> <span style="color: black"> Dalam 5 hari, KM ITERA akan menindaklanjuti dan membalas laporan Kamu</span></li>
-     <li><i class="fa fa-check fa-6"> </i> <br> Selesai <br> <br> <span style="color: black"> Laporan Kamu akan terus ditindaklanjuti hingga terselesaikan </span> </li>
-   </ul>
+  <section class="containers">
+    <h1 class="notop" style=" padding-bottom: 0.7em;">Cara Mengirim Laporan</h1>
+    <div class="container">
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-pencil-square-o"></i>
+        </div>
+        <div class="project-name">
+          <p >TULIS LAPORAN</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-share"></i>
+        </div>
+        <div class="project-name">
+          <p>PROSES VERIFIKASI</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-comments"></i>
+        </div>
+        <div class="project-name">
+          <p>TINDAK LANJUT</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="project-name">
+          <p>SELESAI</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="hangat">
     <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
+    <div class="box">
+        <div class="box-post">
+            <div class="title">
+              <a href="#">Saran Akreditasi pada Pendaftaran CPNS</a>
+            </div>
+            <div class="isi">
+              <p>Assalamualaikum pak, saya mewakili seluruh calon pelamar cpns 2019 ingin meminta agar peraturan kemenpan rb mengenai akreditasi tidak pada saat kelulusan, karena banyak juga calon peserta yang pada saat lulus perguruan tinggi atau program studinya belum terakreditasi..jadi mohon agar di pertimbangkan terkait hal tersebut, agar tidak ada yg dirugikan..agar terwujud sila ke 5 keadilan bagi seluruh rakyat indonesia...</p>
+            </div>
+        </div>
+        <div class="box-post">
+            <div class="title">
+              <a href="#">Saran Akreditasi pada Pendaftaran CPNS</a>
+            </div>
+            <div class="isi">
+              <p>Assalamualaikum pak, saya mewakili seluruh calon pelamar cpns 2019 ingin meminta agar peraturan kemenpan rb mengenai akreditasi tidak pada saat kelulusan, karena banyak juga calon peserta yang pada saat lulus perguruan tinggi atau program studinya belum terakreditasi..jadi mohon agar di pertimbangkan terkait hal tersebut, agar tidak ada yg dirugikan..agar terwujud sila ke 5 keadilan bagi seluruh rakyat indonesia...</p>
+            </div>
+        </div>
+        <div class="box-post">
+            <div class="title">
+              <a href="#">Saran Akreditasi pada Pendaftaran CPNS</a>
+            </div>
+            <div class="isi">
+              <p>Assalamualaikum pak, saya mewakili seluruh calon pelamar cpns 2019 ingin meminta agar peraturan kemenpan rb mengenai akreditasi tidak pada saat kelulusan, karena banyak juga calon peserta yang pada saat lulus perguruan tinggi atau program studinya belum terakreditasi..jadi mohon agar di pertimbangkan terkait hal tersebut, agar tidak ada yg dirugikan..agar terwujud sila ke 5 keadilan bagi seluruh rakyat indonesia...</p>
+            </div>
+        </div>
+    </div>
   </section>
 
 @endsection

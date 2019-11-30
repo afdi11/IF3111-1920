@@ -15,7 +15,7 @@
       <nav>
         <ul class="nav__links">
           <li> <a href="/">Home</a> </li>
-          <li> <a href="#">Buat Laporan</a> </li>
+          <li> <a href="/laporan">Buat Laporan</a> </li>
         </ul>
       </nav>
       <a class="lain" href="#" >DAFTAR</a>
