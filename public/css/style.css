@@ -12,18 +12,19 @@
 
 /* -------------------NAVBAR----------------- */
   .header {
-    position: relative;
+    position: fixed;
     margin-top: 1em;
     padding: 0px 8px;
-    background-color: #24252A;
+    background-color: transparent;
     z-index: 99999;
-    box-shadow: 0px 13px 34px -10px rgba(0,0,0,0.41);
+    transition: all 0.7s ease 0.1s;
+    /* box-shadow: 0px 13px 34px -10px rgba(0,0,0,0.41); */
   }
 
 
  li, a, button{
    font-family: "Quicksand", sans-serif;
-   font-weight: 500;
+   font-weight: 700;
 
    color: white;
    text-decoration: none;
@@ -109,6 +110,7 @@ button:hover, .lain:hover{
   position: fixed;
   top: 0;
   background-color: #24252A;
+  box-shadow: 0px 13px 34px -10px rgba(0,0,0,0.41);
 }
 
 .sticky + .content {
@@ -149,10 +151,15 @@ section{
   background: linear-gradient(90deg, #FF8000, #FFEE04);
 }
 
+.home-box{
+  padding-top: 2em; 
+  position: relative;
+}
+
 .lapor{
-  margin-top: 4em;
+  margin-top: 3em;
   width: 20%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 51%;
   transform: translate(-50%, -50%);
@@ -306,6 +313,21 @@ section{
 }
 .items:hover .icon-wrapper i {
   transform: translateY(5px);
+}
+
+.tambah2{
+  padding: auto;
+  position: relative;
+  color: #FF8000;
+  background-color: white;
+  border: 2px solid  #FF8000;
+  font-size: 16pt;
+
+}
+
+.tambah2:hover{
+  background-color: #FF8000;
+  color:white;
 }
 
 

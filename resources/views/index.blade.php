@@ -5,6 +5,7 @@
 @section('container')
 
   <section class="home">
+    <div class="home-box">
     <h1 style="">Layanan Aspirasi Masyarakat ITERA</h1>
     <h2>Sampaikan laporan Kamu langsung kepada KM ITERA</h2>
 
@@ -19,9 +20,9 @@
 
    <div class="lapor" >
 
-     <button type="button" name="button" class="tambah"><i class="fa fa-plus"> </i> Tambah Laporan</button>
+     <button type="button" name="button" class="tambah"><i class="fa fa-plus"> </i> Buat Laporan</button>
    </div>
-
+   </div>
   </section>
 
   <section class="containers">
@@ -60,36 +61,27 @@
         </div>
       </div>
     </div>
+    <div class="lapor">
+      <button type="button" name="button" class="tambah2" style="margin-top: 4.5em;"><i class="fa fa-plus"> </i> Buat Laporan</button>
+    </div>
   </section>
 
   <section class="hangat">
     <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
+
     <div class="box">
+      @foreach($data as $value)
         <div class="box-post">
             <div class="title">
-              <a href="#">Saran Akreditasi pada Pendaftaran CPNS</a>
+              <a href="">{{$value->judul}}</a>
             </div>
             <div class="isi">
-              <p>Assalamualaikum pak, saya mewakili seluruh calon pelamar cpns 2019 ingin meminta agar peraturan kemenpan rb mengenai akreditasi tidak pada saat kelulusan, karena banyak juga calon peserta yang pada saat lulus perguruan tinggi atau program studinya belum terakreditasi..jadi mohon agar di pertimbangkan terkait hal tersebut, agar tidak ada yg dirugikan..agar terwujud sila ke 5 keadilan bagi seluruh rakyat indonesia...</p>
+              <p>{{$value->isi}}</p>
             </div>
         </div>
-        <div class="box-post">
-            <div class="title">
-              <a href="#">Saran Akreditasi pada Pendaftaran CPNS</a>
-            </div>
-            <div class="isi">
-              <p>Assalamualaikum pak, saya mewakili seluruh calon pelamar cpns 2019 ingin meminta agar peraturan kemenpan rb mengenai akreditasi tidak pada saat kelulusan, karena banyak juga calon peserta yang pada saat lulus perguruan tinggi atau program studinya belum terakreditasi..jadi mohon agar di pertimbangkan terkait hal tersebut, agar tidak ada yg dirugikan..agar terwujud sila ke 5 keadilan bagi seluruh rakyat indonesia...</p>
-            </div>
-        </div>
-        <div class="box-post">
-            <div class="title">
-              <a href="#">Saran Akreditasi pada Pendaftaran CPNS</a>
-            </div>
-            <div class="isi">
-              <p>Assalamualaikum pak, saya mewakili seluruh calon pelamar cpns 2019 ingin meminta agar peraturan kemenpan rb mengenai akreditasi tidak pada saat kelulusan, karena banyak juga calon peserta yang pada saat lulus perguruan tinggi atau program studinya belum terakreditasi..jadi mohon agar di pertimbangkan terkait hal tersebut, agar tidak ada yg dirugikan..agar terwujud sila ke 5 keadilan bagi seluruh rakyat indonesia...</p>
-            </div>
-        </div>
+        @endforeach
     </div>
+
   </section>
 
 @endsection
