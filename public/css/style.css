@@ -5,40 +5,27 @@
   margin: 0;
  }
  body{
+   box-sizing: border-box;
    background: white;
+   font-family: "Quicksand", sans-serif;
  }
 
 /* -------------------NAVBAR----------------- */
   .header {
-    position: relative;
+    position: fixed;
     margin-top: 1em;
     padding: 0px 8px;
-    background-color: #24252A;
+    background-color: transparent;
     z-index: 99999;
-    box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
+    transition: all 0.7s ease 0.1s;
+    /* box-shadow: 0px 13px 34px -10px rgba(0,0,0,0.41); */
   }
 
-  h1{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 700;
-    font-size: 30pt;
-    color: black;
-    text-align: center;
-    padding-top: 2em;
-  }
-  h2{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 300;
-    font-size: 25pt;
-    color: black;
-    text-align: center;
-    padding-top: 0.4em;
-  }
 
  li, a, button{
    font-family: "Quicksand", sans-serif;
-   font-weight: 500;
-   font-size: 16;
+   font-weight: 700;
+
    color: white;
    text-decoration: none;
  }
@@ -67,13 +54,22 @@ header{
 
 }
 
+
+.nav__links li a::before{
+  color: white;
+}
+
 .nav__links li a{
   transition: all 1s ease 0s;
 }
 
-.nav__links li a:hover{
-  color: #0888a9;
-}
+  .nav__links li a:hover{
+    color: rgba(252, 194, 3, 1);
+  }
+
+  .target{
+    border-bottom: 1px solid rgba(252, 194, 3, 1);;
+  }
 
 .lain {
   font-size: 11pt;
@@ -114,6 +110,7 @@ button:hover, .lain:hover{
   position: fixed;
   top: 0;
   background-color: #24252A;
+  box-shadow: 0px 13px 34px -10px rgba(0,0,0,0.41);
 }
 
 .sticky + .content {
@@ -122,6 +119,27 @@ button:hover, .lain:hover{
 
 
 /* ------------------HOME----------------------- */
+
+
+  h1{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 30pt;
+    color: black;
+    text-align: center;
+    padding-top: 2em;
+  }
+  .notop{
+    padding-top: 0;
+  }
+  h2{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 25pt;
+    color: black;
+    text-align: center;
+    padding-top: 0.4em;
+  }
 
 section{
   width: 100%;
@@ -133,10 +151,15 @@ section{
   background: linear-gradient(90deg, #FF8000, #FFEE04);
 }
 
+.home-box{
+  padding-top: 2em; 
+  position: relative;
+}
+
 .lapor{
-  margin-top: 4em;
+  margin-top: 3em;
   width: 20%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 51%;
   transform: translate(-50%, -50%);
@@ -146,6 +169,7 @@ section{
 .tambah{
   background-color: black;
   font-size: 14pt;
+  box-shadow: 4px 4px 5px 2px rgba(0,0,0,.2);
 }
 
 .tambah:hover{
@@ -163,6 +187,7 @@ section{
   background: url(../image/rectangl.png);
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .search {
@@ -204,9 +229,9 @@ section{
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  margin-top: -2em;
+  margin-top: 4em;
   width: 60%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -214,56 +239,149 @@ section{
 
 
 /* -------------SECTION HOW TO--------------- */
-  .container {
-      width: 1000px;
+  .containers {
+      width: 100px auto;
       margin: 150px auto;
+      margin-bottom: 0;
+      position: relative;
     }
 
-  .progressbar {
-      counter-reset: step;
+.container {
+  width: 900px;
+  height: 250px;
+  position: relative;
+  top: 0;
+  left: 15;
+  right: 15;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 20px;
+}
+
+.items {
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 10px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.icon-wrapper, .project-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper i {
+  font-size: 100px;
+  color: #ffa203;
+  transform: translateY(0px);
+  transition: all 0.6s;
+}
+
+.icon-wrapper {
+  align-self: end;
+}
+
+.project-name {
+  align-self: start;
+}
+
+.project-name p {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+
+.items:hover {
+  border-radius: 13px;
+  -webkit-box-shadow: 0px 0px 31px -8px rgba(71,71,71,1);
+  -moz-box-shadow: 0px 0px 31px -8px rgba(71,71,71,1);
+  box-shadow: 0px 0px 31px -8px rgba(71,71,71,1);
+}
+.items:hover .project-name p {
+  transform: translateY(-10px);
+}
+.items:hover .icon-wrapper i {
+  transform: translateY(5px);
+}
+
+.tambah2{
+  padding: auto;
+  position: relative;
+  color: #FF8000;
+  background-color: white;
+  border: 2px solid  #FF8000;
+  font-size: 16pt;
+
+}
+
+.tambah2:hover{
+  background-color: #FF8000;
+  color:white;
+}
+
+
+  /* ------------------SECTION TERHANGAT------------------- */
+  .hangat{
+    height: 700px;
+    position: relative;
+    background: linear-gradient(90deg, #FF8000, #FFEE04);
   }
-  .progressbar li {
-      list-style-type: none;
-      width: 25%;
-      float: left;
-      font-size: 12pt;
-      position: relative;
-      text-align: center;
-      text-transform: uppercase;
-      color: #7d7d7d;
+
+  .hangat::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 155px;
+    background: url(../image/rectangl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-  .progressbar li:before {
-      width: 30px;
-      height: 30px;
-      content: counter(step);
-      counter-increment: step;
-      line-height: 30px;
-      border: 2px solid #7d7d7d;
-      display: block;
-      text-align: center;
-      margin: 0 auto 10px auto;
-      border-radius: 50%;
-      background-color: white;
+
+  .box{
+    color: black;
+    padding-left: 15px;
+    margin-top: 30px;
+    width: 80%;
+    height: 400px;
+    overflow: auto;
+    padding-left: 7.7em;
   }
-  .progressbar li:after {
-      width: 100%;
-      height: 2px;
-      content: '';
-      position: absolute;
-      background-color: #7d7d7d;
-      top: 15px;
-      left: -50%;
-      z-index: -1;
-  }
-  .progressbar li:first-child:after {
-      content: none;
-  }
-  .progressbar li.active {
-      color: green;
-  }
-  .progressbar li.active:before {
-      border-color: #55b776;
-  }
-  .progressbar li.active + li:after {
-      background-color: #55b776;
-  }
+
+.box-post{
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+.box-post .title{
+  font-weight: 500;
+  color: black;
+  font-size: 18px;
+  padding-right: 100px;
+}
+.box-post .title a{
+  font-weight: 700;
+  color: black;
+  font-size: 20px;
+}
+
+.box-post .isi p{
+  line-height: 2.214;
+  color: #4a4a4a;
+}

@@ -5,6 +5,7 @@
 @section('container')
 
   <section class="home">
+    <div class="home-box">
     <h1 style="">Layanan Aspirasi Masyarakat ITERA</h1>
     <h2>Sampaikan laporan Kamu langsung kepada KM ITERA</h2>
 
@@ -19,19 +20,68 @@
 
    <div class="lapor" >
 
-     <button type="button" name="button" class="tambah"><i class="fa fa-plus"> </i> Tambah Laporan</button>
+     <button type="button" name="button" class="tambah"><i class="fa fa-plus"> </i> Buat Laporan</button>
    </div>
-
+   </div>
   </section>
 
-  <section class="container">
-    <h1 style="padding-top: 0; padding-bottom: 1em;">Cara Mengirim Laporan</h1>
-    <ul class="progressbar">
-     <li class="active" >Tulis Laporan</li>
-     <li>Proses Verifikasi</li>
-     <li>Proses Tindak Lanut</li>
-     <li>Selesai</li>
-   </ul>
+  <section class="containers">
+    <h1 class="notop" style=" padding-bottom: 0.7em;">Cara Mengirim Laporan</h1>
+    <div class="container">
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-pencil-square-o"></i>
+        </div>
+        <div class="project-name">
+          <p >TULIS LAPORAN</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-share"></i>
+        </div>
+        <div class="project-name">
+          <p>PROSES VERIFIKASI</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-comments"></i>
+        </div>
+        <div class="project-name">
+          <p>TINDAK LANJUT</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="project-name">
+          <p>SELESAI</p>
+        </div>
+      </div>
+    </div>
+    <div class="lapor">
+      <button type="button" name="button" class="tambah2" style="margin-top: 4.5em;"><i class="fa fa-plus"> </i> Buat Laporan</button>
+    </div>
+  </section>
+
+  <section class="hangat">
+    <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
+
+    <div class="box">
+      @foreach($data as $value)
+        <div class="box-post">
+            <div class="title">
+              <a href="">{{$value->judul}}</a>
+            </div>
+            <div class="isi">
+              <p>{{$value->isi}}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>
+
   </section>
 
 @endsection
