@@ -19,13 +19,13 @@
         <div class="form-lapor-isi">
             <textarea name="isi" class="form-control textarea-flex autosize" placeholder="Ketik laporan anda..." style="overflow: hidden; overflow-wrap: break-word; height: 210px;"></textarea>
         </div>
-        <div class="form-lapor-kategori">
-            <select name="aspek">
-                <option value=1>Dosen</option>
-                <option value=2>Mahasiswa</option>
-                <option value=3>Infrastruktur</option>
-            </select>
-        </div>
+        <select name="aspek" placeholder="Pilihan Kategori">
+            <option value=1>Dosen</option>
+            <option value=2>Mahasiswa</option>
+            <option value=3>Infrastruktur</option>
+        </select><br/><br/>
+        <input name="Lampiran" type="file" accept="image/*"><br/><br/>
+        <input type="submit"><br/>
     </form>
     </div>
     </div>
