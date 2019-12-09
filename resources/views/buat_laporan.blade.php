@@ -12,7 +12,7 @@
 </section>
 
 <section class="containers">
-    <div class="container">
+<div class="container">
     <div class="form-lapor">
     <form method="POST" action="/laporan/tambah" >
         {{ csrf_field() }}
@@ -35,7 +35,43 @@
         </div>
     </form>
     </div>
+</div>
+
+<h1 class="notop" style=" padding-bottom: 0.7em;">Cara Mengirim Laporan</h1>
+<div class="container">
+    <div class="items">
+    <div class="icon-wrapper">
+        <i class="fa fa-pencil-square-o"></i>
     </div>
+    <div class="project-name">
+        <p >TULIS LAPORAN</p>
+    </div>
+    </div>
+    <div class="items">
+    <div class="icon-wrapper">
+        <i class="fa fa-share"></i>
+    </div>
+    <div class="project-name">
+        <p>PROSES VERIFIKASI</p>
+    </div>
+    </div>
+    <div class="items">
+    <div class="icon-wrapper">
+        <i class="fa fa-comments"></i>
+    </div>
+    <div class="project-name">
+        <p>TINDAK LANJUT</p>
+    </div>
+    </div>
+    <div class="items">
+    <div class="icon-wrapper">
+        <i class="fa fa-check"></i>
+    </div>
+    <div class="project-name">
+        <p>SELESAI</p>
+    </div>
+    </div>
+</div>
 </section>
 
 <section class="hangat">
