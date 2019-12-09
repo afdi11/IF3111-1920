@@ -19,7 +19,11 @@
         <input name="pelapor" type=hidden value="anonim"></input>
         
         <div class="form-lapor-isi">
-            <textarea name="isi" placeholder="Ketik laporan anda..." style="overflow: hidden; overflow-wrap: break-word; height: 210px;"></textarea>
+            <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px;"></textarea>
+        </div>
+
+        <div class="form-lapor-isi">
+            <textarea name="isi" placeholder="Ceritakan keluhan anda" style="overflow: hidden; overflow-wrap: break-word; height: 210px;"></textarea>
         </div>
 
         <select name="aspek" style="width:100%; height:40px">

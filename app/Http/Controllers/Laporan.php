@@ -18,6 +18,7 @@ class Laporan extends Controller
      public function tambah(Request $request){
       DB::table('laporan')->insert([
         'Pelapor'=>$request->pelapor,
+        'judul'=>$request->judul,
         'isi'=>$request->isi,
         'aspek'=>$request->aspek,
         'lampiran'=>$request->Lampiran,
