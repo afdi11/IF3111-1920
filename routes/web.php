@@ -13,6 +13,6 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/laporan', function () {
-    return view('buat_laporan');
-});
+Route::get('/laporan','Laporan@form');
+
+Route::post('/laporan/tambah','Laporan@tambah');
