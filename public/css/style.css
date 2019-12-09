@@ -400,8 +400,36 @@ section{
 }
 
 .form-lapor-isi textarea {
+  font-family: "Quicksand", sans-serif;
   border: none;
   width: 93%;
   padding: 30px;
   font-size: 24px;
+}
+
+.lapor-submit {
+  margin-top: 4em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.lapor-button {
+  font-weight: 700;
+
+  color: white;
+  text-decoration: none;
+  padding: 9px 47%;
+  background-color: rgba(252, 194, 3);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.lapor-button:hover{
+  background-color: rgba(0, 0, 0,0.8);
 }
