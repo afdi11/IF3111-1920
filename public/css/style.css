@@ -385,3 +385,70 @@ section{
   line-height: 2.214;
   color: #4a4a4a;
 }
+
+/* ============================= LOGIN ====================== */
+
+.login {
+  background-color: #ececec;
+
+}
+
+.login h1 {
+  padding-top: 4em;
+  font-size: 28pt;
+  background-color: white;
+  color: #FF8000;
+  width: auto;
+  text-align: center;
+}
+
+.form-login{
+  padding-top: 0.5em;
+  background-color: white;
+}
+
+ .inputLogin {
+  display: block;
+  margin: 1em auto;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 5px 5px 12px;
+  height: 50px;
+  width: 25%;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  background-color:#cccccc;
+  color: black;
+}
+
+.submitButton{
+  display: block;
+  margin: 2em auto 0em;
+  border-radius: 5px;
+  padding: 5px 5px 5px 12px;
+  height: 50px;
+  width: 26.5%;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  background-color:#FF8000;
+  color: white;
+}
+
+.submitButton:hover{
+  background-color:rgb(194, 99, 4);
+}
+
+.form-login a{
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  padding: 9px 158px 5px 5px;
+  font-weight: 400;
+  outline: none;
+  text-align: center;
+  color: rgb(255, 128, 0);
+}

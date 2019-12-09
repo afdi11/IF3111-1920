@@ -16,3 +16,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/laporan', function () {
     return view('buat_laporan');
 });
+
+Route::get('/login',    'AuthController@getLogin');
+Route::post('/login',   'AuthController@postLogin')->name('login');
+Route::get('/register', 'AuthController@getRegister');
+Route::post('/register',   'AuthController@postRegister')->name('register');

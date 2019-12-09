@@ -8,8 +8,7 @@
   </head>
 
   <body>
-
-    <div id="myHeader" class="header" style="margin: 0;">
+  <div id="myHeader" class="header" style="margin: 0; background-color: #262626;">
     <header>
       <img href="/" class="logo" src="{{ asset('image/logo.png') }}" style="width: 15%" alt="">
       <nav>
@@ -23,21 +22,16 @@
     </header>
   </div>
 
-  @yield('container')
 
-  <script type="text/javascript">
-  window.onscroll = function() {myFunction()};
-
-  var header = document.getElementById("myHeader");
-  var sticky = header.offsetTop;
-
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-  </script>
+    <div class="login">
+        <h1>LOGIN</h1>
+        <form class="form-login" action="{{ route('login') }}" method="POST">
+        @csrf
+        <input class="inputLogin" type="email" placeholder="Email"> </input>
+        <input class="inputLogin" type="password" placeholder="Password"> </input>
+        <button type="submit" class="submitButton"> LOGIN </button>
+        <a href="/register" style=""> Tidak Punya Akun? <b>Register</b> </a>
+        </form>
+    </div>
   </body>
 </html>
