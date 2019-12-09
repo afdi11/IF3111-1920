@@ -27,8 +27,20 @@
         <h1>LOGIN</h1>
         <form class="form-login" action="{{ route('login') }}" method="POST">
         @csrf
-        <input class="inputLogin" type="email" placeholder="Email" required> </input>
-        <input class="inputLogin" type="password" placeholder="Password" required> </input>
+        <input id="email" name="email" class="inputLogin {{ $errors->has('email') ? 'isinvalid' : '' }}" type="email" placeholder="Email" required> </input>
+        @if($errors->has('email'))
+            <div class="invalid-feedback">
+            {{ $errors->first('email') }}
+            </div>
+        @endif
+
+        <input id="password" name="password" class="inputLogin {{ $errors->has('password') ? 'isinvalid' : '' }}" type="password" placeholder="Password" required> </input>
+        @if($errors->has('password'))
+            <div class="invalid-feedback">
+            {{ $errors->first('password') }}
+            </div>
+        @endif
+
         <button type="submit" class="submitButton"> LOGIN </button>
         <a href="/register" style=""> Tidak Punya Akun? <b>Register</b> </a>
         </form>

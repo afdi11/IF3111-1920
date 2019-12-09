@@ -41,7 +41,7 @@
             </div>
         @endif
         
-        <input id="password" name="password" class="inputLogin {{ $errors->has('password') ? 'isinvalid' : '' }}" type="password" placeholder="Password" required > </input>
+        <input id="password" name="password" class="inputLogin {{ $errors->has('password') ? 'isinvalid' : '' }}" type="password" placeholder="Password (Min. 6 Karakter)" required > </input>
         @if($errors->has('password'))
             <div class="invalid-feedback">
             {{ $errors->first('password') }}

@@ -11,13 +11,16 @@
 |
 */
 
+Route::get('/home', 'HomeController@index')->name('homes');
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/laporan', function () {
     return view('buat_laporan');
 });
 
-Route::get('/login',    'AuthController@getLogin');
-Route::post('/login',   'AuthController@postLogin')->name('login');
-Route::get('/register', 'AuthController@getRegister');
-Route::post('/register',   'AuthController@postRegister')->name('register');
+Route::get('/login',    'AuthController@getLogin')->middleware('guest')->name('login.get');
+Route::post('/login',   'AuthController@postLogin')->middleware('guest')->name('login');
+Route::get('/logout',   'AuthController@logout')->name('auth.logout');
+
+Route::get('/register', 'AuthController@getRegister')->middleware('guest');
+Route::post('/register',   'AuthController@postRegister')->middleware('guest')->name('register');
