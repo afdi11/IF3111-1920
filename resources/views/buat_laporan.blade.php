@@ -75,6 +75,20 @@
 </section>
 
 <section class="hangat">
+    <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
+
+    <div class="box">
+        @foreach($data as $value)
+        <div class="box-post">
+            <div class="title">
+                <a href="">{{$value->judul}}</a>
+            </div>
+            <div class="isi">
+                <p>{{$value->isi}}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>
 </section>
 
 @endsection
