@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\user;
 
 class AuthController extends Controller
 {
@@ -19,6 +20,18 @@ class AuthController extends Controller
     }
 
     public function postRegister(Request $request){
-        dd('OK regist');
+        $this->validate($request, [
+            'name' => 'min:4',
+            'email' => 'email|unique:users,email',
+            'password' => 'min:6|confirmed'
+        ]);
+
+        User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password'))
+        ]);
+
+        return redirect()->back();
     }
 }

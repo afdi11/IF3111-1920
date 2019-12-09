@@ -27,8 +27,8 @@
         <h1>LOGIN</h1>
         <form class="form-login" action="{{ route('login') }}" method="POST">
         @csrf
-        <input class="inputLogin" type="email" placeholder="Email"> </input>
-        <input class="inputLogin" type="password" placeholder="Password"> </input>
+        <input class="inputLogin" type="email" placeholder="Email" required> </input>
+        <input class="inputLogin" type="password" placeholder="Password" required> </input>
         <button type="submit" class="submitButton"> LOGIN </button>
         <a href="/register" style=""> Tidak Punya Akun? <b>Register</b> </a>
         </form>

@@ -27,10 +27,28 @@
         <h1 style="padding-top: 2.5em;">REGISTER</h1>
         <form class="form-login" action="{{ route('register') }}" method="POST">
         @csrf
-        <input class="inputLogin" type="email" placeholder="Email"> </input>
-        <input class="inputLogin" type="text" placeholder="Nama"> </input>
-        <input class="inputLogin" type="password" placeholder="Password"> </input>
-        <input class="inputLogin" type="confpassword" placeholder="Confirm Password"> </input>
+        <input id="email" name="email" class="inputLogin {{ $errors->has('email') ? 'isinvalid' : '' }}" type="email" placeholder="Email" required value="{{ old('email')  }}"></input>
+        @if($errors->has('email'))
+            <div class="invalid-feedback">
+            {{ $errors->first('email') }}
+            </div>
+        @endif
+
+        <input id="name" name="name" class="inputLogin {{ $errors->has('name') ? 'isinvalid' : '' }}" type="text" placeholder="Nama" required value="{{ old('name')  }}"> </input>
+        @if($errors->has('name'))
+            <div class="invalid-feedback">
+            {{ $errors->first('name') }}
+            </div>
+        @endif
+        
+        <input id="password" name="password" class="inputLogin {{ $errors->has('password') ? 'isinvalid' : '' }}" type="password" placeholder="Password" required > </input>
+        @if($errors->has('password'))
+            <div class="invalid-feedback">
+            {{ $errors->first('password') }}
+            </div>
+        @endif
+
+        <input class="inputLogin" name="password_confirmation" type="password" placeholder="Confirm Password {{ $errors->has('password_confirmation') ? 'isinvalid' : '' }}" required> </input>
         <button type="submit" class="submitButton"> REGISTER </button>
         <a href="/login" style=""> Sudah Punya Akun? <b>LOGIN</b> </a>
         </form>
