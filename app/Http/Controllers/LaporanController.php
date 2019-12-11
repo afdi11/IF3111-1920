@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 
 
-class Laporan extends Controller
+class LaporanController extends Controller
 {
      function form(){
       $data['data'] = DB::table('laporan')->get();
