@@ -16,10 +16,15 @@
         <ul class="nav__links">
           <li> <a href="/">Home</a> </li>
           <li> <a href="/laporan">Buat Laporan</a> </li>
+          @if(Auth::check())
+          <li> <a href="/"> {{ Auth::user()->name }} </a> </li>
+          <li><a href="{{ route('auth.logout') }}"><button type="button" name="button">LOG OUT</button></a></li>
         </ul>
       </nav>
+      @else
       <a class="lain" href="/register" >DAFTAR</a>
       <a href="/login"><button type="button" name="button">MASUK</button> </a> 
+      @endif
     </header>
   </div>
 
