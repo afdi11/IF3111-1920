@@ -18,8 +18,8 @@
           <li> <a href="/laporan">Buat Laporan</a> </li>
         </ul>
       </nav>
-      <a class="lain" href="#" >DAFTAR</a>
-      <button type="button" name="button">MASUK</button>
+      <a class="lain" href="/register" >DAFTAR</a>
+      <a href="/login"><button type="button" name="button">MASUK</button> </a> 
     </header>
   </div>
 

@@ -5,10 +5,12 @@
 @section('container')
 
   <section class="home">
+    
+
     <div class="home-box">
     <h1 style="">Layanan Aspirasi Masyarakat ITERA</h1>
     <h2>Sampaikan laporan Kamu langsung kepada KM ITERA</h2>
-
+    <a href="{{ route('auth.logout') }}">logout</a> 
     <div class="wrap">
      <div class="search">
         <input type="text" class="searchTerm" placeholder="Masukkan Kata Kunci Atau ID Laporan">
