@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/home', 'HomeController@index')->name('homes');
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/laporan', function () {
-    return view('buat_laporan');
-});
+Route::get('/laporan','LaporanController@form');
+
+Route::post('/laporan/tambah','LaporanController@tambah');
+Route::get('/home', 'HomeController@index')->name('homes');
+
+// Route::get('/laporan', function () {
+//     return view('buat_laporan');
+// });
 
 Route::get('/login',    'AuthController@getLogin')->middleware('guest')->name('login.get');
 Route::post('/login',   'AuthController@postLogin')->middleware('guest')->name('login');
