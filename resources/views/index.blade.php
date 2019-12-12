@@ -21,7 +21,7 @@
 
    <div class="lapor" >
 
-     <button type="button" name="button" class="tambah"><i class="fa fa-plus"> </i> Buat Laporan</button>
+    <a href="/laporan"><button type="button" name="button" class="tambah"><i class="fa fa-plus"> </i> Buat Laporan</button></a> 
    </div>
    </div>
   </section>
@@ -63,12 +63,13 @@
       </div>
     </div>
     <div class="lapor">
-      <button type="button" name="button" class="tambah2" style="margin-top: 4.5em;"><i class="fa fa-plus"> </i> Buat Laporan</button>
+     <a href="/laporan"><button type="button" name="button" class="tambah2" style="margin-top: 4.5em;"><i class="fa fa-plus"> </i> Buat Laporan</button></a> 
     </div>
   </section>
 
   <section class="hangat">
-    <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
+  <div class="hangat-box">
+    <h1 class="notop" style="text-align: left; padding-top: 0em; ">Laporan Terhangat</h1>
 
     <div class="box">
       @foreach($data as $value)
@@ -82,7 +83,7 @@
         </div>
         @endforeach
     </div>
-
+    </div>
   </section>
 
 @endsection

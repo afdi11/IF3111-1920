@@ -337,6 +337,17 @@ section{
     position: relative;
     background: linear-gradient(90deg, #FF8000, #FFEE04);
   }
+  .hangat-box{
+    top: 10em;
+    display: block;
+    margin: auto;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
+    padding: 30px;
+    background: rgb(255, 255, 255);
+    width: 70%;
+    height: 65%;
+  }
 
   .hangat::before{
     content: '';
@@ -356,10 +367,10 @@ section{
     color: black;
     padding-left: 15px;
     margin-top: 30px;
-    width: 80%;
+    width: auto;
     height: 400px;
     overflow: auto;
-    padding-left: 7.7em;
+    
   }
 
 .box-post{
@@ -373,7 +384,7 @@ section{
   font-weight: 500;
   color: black;
   font-size: 18px;
-  padding-right: 100px;
+  padding-right: 70px;
 }
 .box-post .title a{
   font-weight: 700;

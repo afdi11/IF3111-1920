@@ -16,14 +16,17 @@
     <div class="form-lapor">
     <form method="POST" action="/laporan/tambah" >
         {{ csrf_field() }}
-        <input name="pelapor" type=hidden value="anonim"></input>
-        
         <div class="form-lapor-isi">
-            <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px;"></textarea>
+            @if(Auth::user())
+            <textarea name="pelapor" placeholder="Dari : {{ Auth::user()->name }}" style="overflow: hidden; overflow-wrap: break-word; height: 30px;" readonly>{{ Auth::user()->email }}</textarea>
+            @else
+            <textarea name="pelapor" placeholder="Dari : Anonim" style="overflow: hidden; overflow-wrap: break-word; height: 30px;" value="anonim" readonly></textarea>
+            @endif
+            <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px;">asd</textarea>
         </div>
 
         <div class="form-lapor-isi">
-            <textarea name="isi" placeholder="Ceritakan keluhan anda" style="overflow: hidden; overflow-wrap: break-word; height: 210px;"></textarea>
+            <textarea name="isi" placeholder="Ceritakan keluhan anda" style="overflow: hidden; overflow-wrap: break-word; height: 210px; resize: none;"></textarea>
         </div>
 
         <select name="aspek" style="width:100%; height:40px">
@@ -41,58 +44,66 @@
     </div>
 </div>
 
-<h1 class="notop" style=" padding-bottom: 0.7em;">Cara Mengirim Laporan</h1>
-<div class="container">
-    <div class="items">
-    <div class="icon-wrapper">
-        <i class="fa fa-pencil-square-o"></i>
+
+
+<section class="containers">
+    <h1 class="notop" style=" padding-bottom: 0.7em;">Cara Mengirim Laporan</h1>
+    <div class="container">
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-pencil-square-o"></i>
+        </div>
+        <div class="project-name">
+          <p >TULIS LAPORAN</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-share"></i>
+        </div>
+        <div class="project-name">
+          <p>PROSES VERIFIKASI</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-comments"></i>
+        </div>
+        <div class="project-name">
+          <p>TINDAK LANJUT</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="icon-wrapper">
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="project-name">
+          <p>SELESAI</p>
+        </div>
+      </div>
     </div>
-    <div class="project-name">
-        <p >TULIS LAPORAN</p>
-    </div>
-    </div>
-    <div class="items">
-    <div class="icon-wrapper">
-        <i class="fa fa-share"></i>
-    </div>
-    <div class="project-name">
-        <p>PROSES VERIFIKASI</p>
-    </div>
-    </div>
-    <div class="items">
-    <div class="icon-wrapper">
-        <i class="fa fa-comments"></i>
-    </div>
-    <div class="project-name">
-        <p>TINDAK LANJUT</p>
-    </div>
-    </div>
-    <div class="items">
-    <div class="icon-wrapper">
-        <i class="fa fa-check"></i>
-    </div>
-    <div class="project-name">
-        <p>SELESAI</p>
-    </div>
-    </div>
-</div>
+    <!-- <div class="lapor">
+      
+    </div> -->
 </section>
 
 <section class="hangat">
-    <h1 class="notop" style="text-align: left; padding-top: 5em; padding-left: 3em">Laporan Terhangat</h1>
+  <div class="hangat-box">
+    <h1 class="notop" style="text-align: left; padding-top: 0em; ">Laporan Terhangat</h1>
 
     <div class="box">
-        @foreach($data as $value)
+      @foreach($data as $value)
         <div class="box-post">
             <div class="title">
-                <a href="">{{$value->judul}}</a>
+              <a href="">{{$value->judul}}</a>
             </div>
             <div class="isi">
-                <p>{{$value->isi}}</p>
+              <p>{{$value->isi}}</p>
             </div>
         </div>
         @endforeach
     </div>
-</section>
+    </div>
+  </section>
 
 @endsection
