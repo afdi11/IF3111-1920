@@ -18,7 +18,23 @@ contoh: fix css, membuat post done, jangan seperti final, benerin dikit, oke deh
 Disarankan untuk tidak melakukan commit dengan perubahan yang besar karena akan mempengaruhi 
 penilaian (contoh: hanya melakukan satu commit kemudian dikumpulkan).
 3. Ubah **Penjelasan Teknis** pada bagian bawah readme.md ini dengan menjelaskan bagaimana cara anda:
-   - Instalasi Framework, Koneksi basis data 
+   - IInstallasi Framework (LARAVEL)
+1.	Yang pertama adalah install composer terlebih dahulu pada PC
+2.	Kemudian buka command prompt (cmd)
+3.	Selanjutnya kita akan memulai instalasi laravel dengan mulai mendownload laravel menggunakan composer
+4.	Kita masuk dahulu ke direktori dimana letak project Laravel nya ingin dibuat.
+5.	Disini kita membuat project Laravel dalam folder htdocs didalam XAMPP
+6.	Ketik “cd C:\XAMPP/htdocs/IF3111-1920” pada cmd
+7.	Kemudian ketikkan perintah “composer create-project --prefer-dist laravel/IF3111-1920” untuk menginstall Laravel dan tekan enter
+8.	Proses download akan memakan waktu beberapa menit tergantung dengan koneksi internet
+9.	Setelah selesai kita akan punya folder project “IF3111-1920” dalam folder htdocs
+10.	Jika ingin masuk ke folder project kita, caranya bisa melalui cmd dengan mengetikkan perintah “cd IF-3111-1920” dan ketik lagi “php artisan serve”
+11.	Kita juga bisa menjalankan project laravel dengan langsung mengakses project kita melalui web browser dengan alamat “http://localhost/IF3111-1920/public”
+Cara Koneksi basis data
+1.	Yang pertama adalah pastikan kita memiliki sebuah database yang sudah dibuat
+2.	Kemudian import ke database yang sudah dibuat tadi
+3.	Setelah itu kita mulai membuat koneksi databse php dan mysql dengan cara membuat sebuah file php dengan nama
+
    - Melakukan validasi pada client-side
    - Melakukan AJAX (mulai dari pengguna melakukan klik pada tombol LAPOR! sampai laporan/komentar terkirim).
 4. Pull request dari repository anda ke repository ini dengan 
