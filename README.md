@@ -32,6 +32,7 @@ Installasi Framework (LARAVEL)
 9.	Setelah selesai kita akan punya folder project “IF3111-1920” dalam folder htdocs
 10.	Jika ingin masuk ke folder project kita, caranya bisa melalui cmd dengan mengetikkan perintah “cd IF-3111-1920” dan ketik lagi “php artisan serve”
 11.	Kita juga bisa menjalankan project laravel dengan langsung mengakses project kita melalui web browser dengan alamat “http://localhost/IF3111-1920/public”
+
 Cara Koneksi basis data
 1.	Yang pertama adalah pastikan kita memiliki sebuah database yang sudah dibuat
 2.	Database yang sudah dibuat disini adalah factories
@@ -39,6 +40,7 @@ Cara Koneksi basis data
 4.	Disini database yang sudah dibuat adalah UserFactory.php
 5.	Kemudian import ke database yang sudah dibuat tadi
 6.	Simpan file php tersebut pada directory localhost kita
+
 Cara Melakukan validasi pada client-side
 1.	Disini kita mempunyai validation.php, password.php, pagination.php, auth.php
 2.	Kemudian menambahkan function validasi (form) pada kode program javascripst untuk memvalidasi field alamat tidak boleh kosong
@@ -49,7 +51,6 @@ Cara Melakukan validasi pada client-side
 7.	Jika field alamat dikosongkan oleh pengguna saat menambah data, maka sistem akan menampilkan pesan error yang menerangkan bahwa field alamat tidak boleh kosong. Proses penyimpanan pun akan dibatalkan atau tidak dilanjutkan.
 8.	Ataupun jika terjadi kesalahan saat input data atau data yang dimasukkan tidak cocok dengan yang ada di database, maka proses penyimpanan pun akan dibatalkan atau tidak dilanjutkan.
 
-- Melakukan AJAX (mulai dari pengguna melakukan klik pada tombol LAPOR! sampai laporan/komentar terkirim).
 4. Pull request dari repository anda ke repository ini dengan 
 format **NIM** - **Nama Lengkap**. **Waktu terkahir proses pull request adalah 4 hari setelah 
 ujian akhir semester (UAS)**
