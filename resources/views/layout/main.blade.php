@@ -30,19 +30,24 @@
 
   @yield('container')
 
+  <footer>
+  <p align="center">Pemrograman web</p>
+  <p align="center">Teknik Informatika</p>
+</footer>
+
   <script type="text/javascript">
-  window.onscroll = function() {myFunction()};
+      window.onscroll = function() {myFunction()};
 
-  var header = document.getElementById("myHeader");
-  var sticky = header.offsetTop;
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
 
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
   </script>
   </body>
 </html>
