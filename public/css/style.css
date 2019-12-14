@@ -238,7 +238,7 @@ section{
   transform: translate(-50%, -50%);
 }
 
-footer{
+.footer{
   font-family: 'Libre Franklin', sans-serif;
   background-color: rgb(107, 5, 5);
   color: white;

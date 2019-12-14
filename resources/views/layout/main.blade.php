@@ -29,12 +29,11 @@
   </div>
 
   @yield('container')
+  
+ 
+  
 
-  <footer>
-  <p align="center">Pemrograman web</p>
-  <p align="center">Teknik Informatika</p>
-</footer>
-
+  </body>
   <script type="text/javascript">
       window.onscroll = function() {myFunction()};
 
@@ -49,5 +48,6 @@
         }
       }
   </script>
-  </body>
+
+  
 </html>
