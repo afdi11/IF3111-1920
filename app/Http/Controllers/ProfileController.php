@@ -15,7 +15,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile');
+        $emails = \Auth::user()->email;
+        $data['data'] = DB::table('laporan')->where('pelapor', '=', $emails )->get();
+        return view('profile', $data);
     }
 
     /**
@@ -36,7 +38,8 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+
     }
 
     /**
@@ -48,6 +51,14 @@ class ProfileController extends Controller
     public function show($id)
     {
         //
+    }
+    
+    public function DeletePost($id){
+
+        DB::table('laporan')->where('id', '=', $id)->delete();
+        $emails = \Auth::user()->email;
+        $data['data'] = DB::table('laporan')->where('pelapor', '=', $emails )->get();
+        return view('profile', $data);
     }
 
     /**

@@ -18,11 +18,11 @@
         {{ csrf_field() }}
         <div class="form-lapor-isi">
             @if(Auth::user())
-            <textarea name="pelapor" placeholder="Dari : {{ Auth::user()->name }}" style="overflow: hidden; overflow-wrap: break-word; height: 30px;" readonly>{{ Auth::user()->email }}</textarea>
+            <textarea name="pelapor" placeholder="Dari : {{ Auth::user()->name }}" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;" readonly>{{ Auth::user()->email }}</textarea>
             @else
-            <textarea name="pelapor" placeholder="Dari : Anonim" style="overflow: hidden; overflow-wrap: break-word; height: 30px;" value="anonim" readonly></textarea>
+            <textarea name="pelapor" placeholder="Dari : Anonim" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;" readonly></textarea>
             @endif
-            <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px;">asd</textarea>
+            <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;"></textarea>
         </div>
 
         <div class="form-lapor-isi">
