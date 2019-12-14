@@ -28,3 +28,5 @@ Route::get('/logout',   'AuthController@logout')->name('auth.logout');
 
 Route::get('/register', 'AuthController@getRegister')->middleware('guest');
 Route::post('/register',   'AuthController@postRegister')->middleware('guest')->name('register');
+
+Route::get('/detail','Controller@detail');
