@@ -15,7 +15,8 @@
     <div class="form-lapor">
     @foreach($data as $lapor)
         <div class="form-lapor-isi">
-            <textarea name="pelapor" placeholder="Dari : {{ Auth::user()->name }}" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;" readonly>{{ Auth::user()->email }}</textarea>
+
+            <textarea name="pelapor" placeholder="Dari : {{ $lapor->pelapor }}" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;" readonly></textarea>
             <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;" readonly>{{ $lapor->judul }}</textarea>
         </div>
         <div class="form-lapor-isi">

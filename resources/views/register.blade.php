@@ -49,7 +49,7 @@
         @endif
 
         <input id="txtConfirmPassword" class="inputLogin" name="password_confirmation" type="password" placeholder="Confirm Password {{ $errors->has('password_confirmation') ? 'isinvalid' : '' }}" required> </input>
-        <button type="submit" class="submitButton" onclick="return Validate(document.logins.password_confirmation)"> REGISTER </button>
+        <button type="submit" class="submitButton" onclick="return Validate(document.logins.email)"> REGISTER </button>
         <a href="/login" style=""> Sudah Punya Akun? <b>LOGIN</b> </a>
         </form>
     </div>
@@ -60,20 +60,16 @@
         var password = document.getElementById("txtPassword").value;
         var confirmPassword = document.getElementById("txtConfirmPassword").value;
 
-        if (password != confirmPassword) {
+        if ((password != confirmPassword)) {
              alert("Passwords do not match.");
             return false;
         }
         
-        if(inputText.value.match(mailformat)) {
-          document.logins.password_confirmation.focus();
-          return true;
-        }
-        else {
+        if(!(inputText.value.match(mailformat))) {
           alert("You have entered an invalid email address! \n Example Email Adress : example@example.com");
-          document.form1.text1.focus();
+          
           return false;
-        } 
+        }
     }
     </script>
 </html>
