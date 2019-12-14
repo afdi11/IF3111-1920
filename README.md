@@ -20,7 +20,7 @@ penilaian (contoh: hanya melakukan satu commit kemudian dikumpulkan).
 3. Ubah **Penjelasan Teknis** pada bagian bawah readme.md ini dengan menjelaskan bagaimana cara anda:
    - PENJELASAN TEKNIK tubes Web
 
-Installasi Framework (LARAVEL)
+=============Installasi Framework (LARAVEL)=====================
 1.	Yang pertama adalah install composer terlebih dahulu pada PC
 2.	Kemudian buka command prompt (cmd)
 3.	Selanjutnya kita akan memulai instalasi laravel dengan mulai mendownload laravel menggunakan composer
@@ -32,12 +32,14 @@ Installasi Framework (LARAVEL)
 9.	Setelah selesai kita akan punya folder project “IF3111-1920” dalam folder htdocs
 10.	Jika ingin masuk ke folder project kita, caranya bisa melalui cmd dengan mengetikkan perintah “cd IF-3111-1920” dan ketik lagi “php artisan serve”
 11.	Kita juga bisa menjalankan project laravel dengan langsung mengakses project kita melalui web browser dengan alamat “http://localhost/IF3111-1920/public”
-Cara Koneksi basis data
+
+=============Cara Koneksi basis data======================
 1.	Yang pertama adalah pastikan kita memiliki sebuah database yang sudah dibuat
 2.	Kemudian import ke database yang sudah dibuat tadi
 3.	Setelah itu kita mulai membuat koneksi databse php dan mysql dengan cara membuat sebuah file php
 4.	Simpan file php tersebut pada directory localhost kita
-Cara Melakukan validasi pada client-side
+
+==============Cara Melakukan validasi pada client-side=====================
 1.	Hal yang harus dilakukan adalah menambahkan function validasi (form) pada kode program javascripst untuk memvalidasi field alamat tidak boleh kosong
 2.	Setelah itu tambahkan controller untuk menampilkan halaman form dan memproses form
 3.	Jadi kita membuat controller dengan dua action, satu untuk GET dan satunya untuk POST
