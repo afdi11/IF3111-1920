@@ -6,6 +6,7 @@
 
   <section class="home">
     
+
     <div class="home-box">
     <h1 style="">Layanan Aspirasi Masyarakat ITERA</h1>
     <h2>Sampaikan laporan Kamu langsung kepada KM ITERA</h2>

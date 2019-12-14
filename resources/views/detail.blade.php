@@ -7,7 +7,7 @@
 <section class="home">
     <div class="home-box">
     <h1 style="">Layanan Aspirasi Masyarakat ITERA</h1>
-    <h2>Sampaikan laporan/komentarmu!</h2>
+    <h2>Ubah laporan/komentarmu!</h2>
     </div>
 </section>
 
@@ -35,7 +35,7 @@
         <input name="Lampiran" type="file" accept="image/*">
 
         <div class="lapor-submit">
-            <input class="lapor-button" type="submit" value="LAPOR!"></input>
+            <input class="lapor-button" type="submit" value="Perbarui"></input>
         </div>
     </form>
     </div>
