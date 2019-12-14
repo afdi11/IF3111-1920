@@ -24,6 +24,9 @@ Route::group(['prefix' => 'profile'], function(){
     Route::get('post/{id?}',   'ProfileController@EditViewPost')->middleware('auth')->name('edit.post.view');
     Route::post('edit/{id?}',   'ProfileController@EditPost')->middleware('auth')->name('edit.posting');
 });
+
+Route::get('posts/{id?}',   'LaporanController@ViewPost')->name('post.view');
+
 // Route::get('/laporan', function () {
 //     return view('buat_laporan');
 // });

@@ -80,8 +80,8 @@ class ProfileController extends Controller
           'judul'=>$request->judul,
           'isi'=>$request->isi,
           'aspek'=>$request->aspek,
-          // 'lampiran'=>$request->Lampiran,
-          // 'Waktu'=>NOW()
+          'lampiran'=>$request->Lampiran,
+          'Waktu'=>NOW()
           ]);
           
         return redirect('/profile');

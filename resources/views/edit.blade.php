@@ -15,17 +15,16 @@
 <div class="container">
     <div class="form-lapor">
     @foreach($data as $lapor)
-    <form method="POST" action="{{ route('edit.posting', $lapor->ID) }}" >
+    <form name="forms" method="POST" action="{{ route('edit.posting', $lapor->ID) }}" >
         {{ csrf_field() }}
         <div class="form-lapor-isi">
-           
             <textarea name="pelapor" placeholder="Dari : {{ Auth::user()->name }}" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;" readonly>{{ Auth::user()->email }}</textarea>
-            <textarea name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;">{{ $lapor->judul }}</textarea>
+            <textarea id="judul" name="judul" placeholder="Ketik laporan anda...(Judul)" style="overflow: hidden; overflow-wrap: break-word; height: 30px; resize: none;">{{ $lapor->judul }}</textarea>
         </div>
         <div class="form-lapor-isi">
-            <textarea name="isi" placeholder="Ceritakan keluhan anda" style="overflow: hidden; overflow-wrap: break-word; height: 210px; resize: none;">{{ $lapor->isi }}</textarea>
+            <textarea id="isi" name="isi" placeholder="Ceritakan keluhan anda" style="overflow: hidden; overflow-wrap: break-word; height: 210px; resize: none;">{{ $lapor->isi }}</textarea>
         </div>
-        @endforeach
+        
         <select name="aspek" style="width:100%; height:40px">
             <option value="" hidden>{{ $lapor->aspek }}</option>
             @foreach($aspek as $a)
@@ -33,9 +32,10 @@
             @endforeach
         </select><br/><br/>
         <input name="Lampiran" type="file" accept="image/*">
-
+        <img src="'IF3111-1920\public\images\{{ $lapor->lampiran }}" />
+        @endforeach
         <div class="lapor-submit">
-            <input class="lapor-button" type="submit" value="Ubah"></input>
+            <input class="lapor-button" type="submit" onclick="return validateForm()" value="Ubah"></input>
         </div>
     </form>
     </div>
@@ -84,5 +84,13 @@
     </div> -->
 </section>
 
-
+<script>
+function validateForm() {
+  var x = document.getElementById("judul").value;
+  if (document.getElementById("judul").value == "" || document.getElementById("isi").value == "") {
+    alert("Tolong Isi Semua Field");
+    return false;
+  }
+}
+</script>
 @endsection

@@ -11,6 +11,7 @@ use App\User;
 
 class LaporanController extends Controller
 {
+    
      function form(){
       $data['data'] = DB::table('laporan')->get();
       $data['aspek'] = DB::table('aspek')->get();
@@ -23,11 +24,25 @@ class LaporanController extends Controller
         'judul'=>$request->judul,
         'isi'=>$request->isi,
         'aspek'=>$request->aspek,
-        // 'lampiran'=>$request->Lampiran,
-        // 'Waktu'=>NOW()
+        'lampiran'=>$request->Lampiran,
+        'Waktu'=>NOW()
         ]);
+        if ($request->file('Lampiran')){
+          $filename=time();
+          $fileName   = time() . '.' . $request->file('Lampiran')->getClientOriginalExtension();
+          $file = $request->file('Lampiran')->move('images', $fileName);
+          }
+        
+        // $no++;
         
       return redirect('/laporan');
+     }
+
+     public function ViewPost($id){
+
+      $data['data'] = DB::table('laporan')->where('ID', '=', $id)->get();
+      $data['aspek'] = DB::table('aspek')->get();
+      return view('post_detail', $data);
      }
 }
 ?>

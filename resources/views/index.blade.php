@@ -78,6 +78,7 @@
             <div class="isi">
               <p>{{$value->isi}}</p>
             </div>
+            <a href="{{ route('post.view',  $value->ID) }}" style="color:black">Lihat Selengkapnya</a>
         </div>
         @endforeach
     </div>
