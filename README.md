@@ -49,7 +49,7 @@ Cara Melakukan validasi pada client-side
 5.	Disini yang akan digunakan untuk validasi adalah email dan password
 6.	Jadi setelah pengguna menginputkan email dan password, data tersebut akan dikirimkan untuk di cocokkan dengan data pada database factories (UserFactory.php)
 7.	Jika field alamat dikosongkan oleh pengguna saat menambah data, maka sistem akan menampilkan pesan error yang menerangkan bahwa field alamat tidak boleh kosong. Proses penyimpanan pun akan dibatalkan atau tidak dilanjutkan.
-8.	Ataupun jika terjadi kesalahan saat input data atau data yang dimasukkan tidak cocok dengan yang ada di database, maka proses penyimpanan pun akan dibatalkan atau tidak dilanjutkan.
+8.	Ataupun jika terjadi kesalahan saat input data atau data yang dimasukkan tidak cocok dengan yang ada di database (saat mencocokan dengan database tidak cocok), maka proses penyimpanan pun akan dibatalkan atau tidak dilanjutkan.
 
 4. Pull request dari repository anda ke repository ini dengan 
 format **NIM** - **Nama Lengkap**. **Waktu terkahir proses pull request adalah 4 hari setelah 
