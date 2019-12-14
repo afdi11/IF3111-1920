@@ -20,7 +20,9 @@ Route::get('/home', 'HomeController@index')->name('homes');
 
 Route::group(['prefix' => 'profile'], function(){
     Route::get('/', 'ProfileController@index')->middleware('auth')->name('profile');
-    Route::get('delete/{id?}',   'ProfileController@DeletePost')->name('delete.post');
+    Route::get('delete/{id?}',   'ProfileController@DeletePost')->middleware('auth')->name('delete.post');
+    Route::get('post/{id?}',   'ProfileController@EditViewPost')->middleware('auth')->name('edit.post.view');
+    Route::post('edit/{id?}',   'ProfileController@EditPost')->middleware('auth')->name('edit.posting');
 });
 // Route::get('/laporan', function () {
 //     return view('buat_laporan');

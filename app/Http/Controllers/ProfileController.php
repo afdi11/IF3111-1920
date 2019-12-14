@@ -67,6 +67,27 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function EditViewPost($id)
+    {
+        $data['data'] = DB::table('laporan')->where('ID', '=', $id )->get();
+        $data['aspek'] = DB::table('aspek')->get();
+        return view('edit', $data);
+    }
+    
+    public function EditPost(Request $request, $id){
+        DB::table('laporan')->where('id', $id)->update([
+          'pelapor'=>$request->pelapor,
+          'judul'=>$request->judul,
+          'isi'=>$request->isi,
+          'aspek'=>$request->aspek,
+          // 'lampiran'=>$request->Lampiran,
+          // 'Waktu'=>NOW()
+          ]);
+          
+        return redirect('/profile');
+       }
+    
+    
     public function edit($id)
     {
         //

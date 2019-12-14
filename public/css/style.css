@@ -624,10 +624,10 @@ section{
   margin: 2em auto;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
-  padding: 30px;
+  padding: 20px;
   background: rgb(255, 255, 255);
   width: 70%;
-  height: 65%;
+  height: 30%;
   float: left;
 }
 .boxs{
@@ -635,7 +635,7 @@ section{
   padding-left: 15px;
   margin-top: 30px;
   width: auto;
-  height: 200px;
+  height: 150px;
   overflow: auto;
   overflow: hidden;
   text-overflow: ellipsis;

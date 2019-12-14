@@ -22,12 +22,12 @@
         <div class="user-box" style="">
             <div class="boxs">
                 <div class="title">
-                    <a href="" style="color: black; font-size: 24pt;">{{$value->judul}}</a>
+                    <a href="" style="padding-top: 0.5em; color: black; font-size: 24pt;">{{$value->judul}}</a>
                 </div>
                 <div class="isi" style="padding-top: 1em; padding-bottom: 2em;">
                     <p >{{$value->isi}}</p>
                 </div>
-                <a href="" style=" color: black; font-size: 12pt;">Edit</a>
+                <a href="{{ route('edit.post.view',  $value->ID) }}" style="color: black; font-size: 12pt;">Edit</a>
                 <a onclick="return ConfDelete()" href="{{ route('delete.post',  $value->ID) }}" style=" padding-left: 2em; color: red; font-size: 12pt;">Delete</a>
             </div>    
         </div>
