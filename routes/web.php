@@ -18,13 +18,16 @@ Route::get('/laporan','LaporanController@form');
 Route::post('/laporan/tambah','LaporanController@tambah');
 Route::get('/home', 'HomeController@index')->name('homes');
 
+Route::group(['prefix' => 'profile'], function(){
+    Route::get('/', 'ProfileController@index')->middleware('auth')->name('profile');
+});
 // Route::get('/laporan', function () {
 //     return view('buat_laporan');
 // });
 
 Route::get('/login',    'AuthController@getLogin')->middleware('guest')->name('login.get');
 Route::post('/login',   'AuthController@postLogin')->middleware('guest')->name('login');
-Route::get('/logout',   'AuthController@logout')->name('auth.logout');
+Route::get('/logout',   'AuthController@logout')->middleware('auth')->name('auth.logout');
 
 Route::get('/register', 'AuthController@getRegister')->middleware('guest');
 Route::post('/register',   'AuthController@postRegister')->middleware('guest')->name('register');
